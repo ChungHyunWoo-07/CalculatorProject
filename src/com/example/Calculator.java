@@ -25,6 +25,7 @@ public class Calculator {
                     break;
                 default:
                     System.out.println("잘못된 연산입니다.");
+                    return 50;
             }return result;
         }
     }
