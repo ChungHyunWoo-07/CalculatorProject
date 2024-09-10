@@ -6,28 +6,27 @@ public class App { // 모든이름을 수정할 경우 단축키 F2를 눌러서
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        String input = "";
+        String input = "";  // while에서 반복할지 멈출지 정해주기 위한 조건에 넣기위해 문자열 input을 선언
 
         while(!input.equals("exit")) { // !=로 같지 않다를 표현하였더니 인텔리제이에서 수정해줌
             System.out.print("첫 번째 값을 입력하세요: ");
-            int n1 = Integer.parseInt(sc.nextLine());
-            System.out.print("두 번째 값을 입력하세요: ");
-            int n2 = Integer.parseInt(sc.nextLine());
+            int n1 = Integer.parseInt(sc.nextLine());  // 처음엔 nextInt를 넣었는데 제대로 작동하지 않아 형변환하여 nextLine으로 수정
+
             System.out.print("연산기호를 입력하세요: ");
             String p = sc.nextLine();
 
-            Calculator calculator = new Calculator();
-            double result1 = 0;
-            result1 = calculator.calculate(n1, n2, p);
-            System.out.println("결과: " + result1);
+            System.out.print("두 번째 값을 입력하세요: ");
+            int n2 = Integer.parseInt(sc.nextLine());
 
-            System.out.print("계산을 종료하시려면 exit를 입렵하세요: ");
+            Calculator calculator = new Calculator();  //Calculator클래스를 가져오기 위해 인스턴스화 하여 calculator(변수명)에 대입
+            double result1 = 0;  // 계산하기 전에 result1의 값을 0으로 초기화
+            result1 = calculator.getCalculate(n1, n2, p);  // 런타임 후 작성되는 값으로 실행하기 위해 지정한 변수명을 넣어 스캐너를 통해 읽음
+            System.out.println("결과: " + result1);  // 결과값 도출
+
+            System.out.print("계산을 종료하시려면 exit를 입렵하세요: ");  // 결과값 도출 후 exit외에 다른 문자열을 넣으면 다시 while문 반복
             input = sc.nextLine();
         }
         System.out.println("종료합니다.");
-            sc.close();
-
-
     }
 
 
