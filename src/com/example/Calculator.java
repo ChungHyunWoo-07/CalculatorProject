@@ -4,6 +4,9 @@ import java.util.*;
 
 public class Calculator {
     private final ArrayList<Double> result = new ArrayList<>(); // 배열객체를 더블 타입의 result에 담는다
+    public void remove(){ // 첫 번째 값 삭제
+        result.remove(0);
+    }
     private int num1;  // num1 캡슐화
     private int num2;  // num2 캡슐화
     private String operation;  // String p 캡슐화
