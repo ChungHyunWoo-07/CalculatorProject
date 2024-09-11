@@ -15,12 +15,12 @@ public class App { // 모든이름을 수정할 경우 단축키 F2를 눌러서
             num1 = Integer.parseInt(sc.next());  // 처음엔 nextInt를 넣었는데 제대로 작동하지 않아 형변환하여 nextLine으로 수정
 
             System.out.print("연산기호를 입력하세요: ");
-            String p = sc.next();
+            String operation = sc.next();
 
             System.out.print("두 번째 값을 입력하세요: ");
             num2 = Integer.parseInt(sc.next());
 
-            calculator.calculate(num1, num2, p);  // 런타임 후 작성되는 값으로 실행하기 위해 지정한 변수명을 넣어 스캐너를 통해 읽음
+            calculator.calculate(num1, num2, operation);  // 런타임 후 작성되는 값으로 실행하기 위해 지정한 변수명을 넣어 스캐너를 통해 읽음
             System.out.println(calculator.getResult());  // 결과값 도출
 
             System.out.print("계산을 종료하시려면 exit를 입렵하세요: ");  // 결과값 도출 후 exit외에 다른 문자열을 넣으면 다시 while문 반복
