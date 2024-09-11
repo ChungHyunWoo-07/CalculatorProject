@@ -18,7 +18,7 @@ public class Calculator {
         }
     }
 
-    public  void setcalculate(int num1, int num2, String p) {
+    public  void setCalculate(int num1, int num2, String p) {
         this.p = p;
         this.num1 = num1;
         this.num2 = num2;
